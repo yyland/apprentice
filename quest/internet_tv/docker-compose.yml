@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: mysql-8.0
+    build: 
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    volumes:
+      - ./db-volume:/var/lib/mysql
+      - .:/internet_tv
+    environment:
+      MYSQL_ROOT_PASSWORD: password

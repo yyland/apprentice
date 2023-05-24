@@ -1,0 +1,81 @@
+@startuml
+
+entity channels{ 
+    ch_code 
+    --
+    name 
+}
+
+entity genres {
+    genre_code  
+    --
+    name 
+}
+
+entity programs { 
+    prg_code 
+    --
+    title 
+    description
+}
+
+entity ch_schedules {
+    ch_sch_id
+    --
+    ch_code (FK)
+    prg_code (FK)
+    epi_id (FK)
+    date
+    start_time
+    end_time
+}
+
+entity episodes {
+    epi_id 
+    --
+    title
+    description
+    length
+    release_date 
+}
+
+entity prg_episodes {
+    prg_code (FK)
+    epi_id (FK)
+    --
+    prg_serial_no
+    season_no 
+    season_epi_no 
+}
+
+entity countries {
+    country_code
+    ----
+    name
+}
+
+entity broadcasts {
+    ch_sch_id (FK)
+    country_code (FK)
+    --
+    views 
+}
+
+entity prg_genres {
+    prg_code (FK)
+    genre_code (FK)
+    --
+}
+
+episodes ||-r-|{ prg_episodes
+prg_episodes ||-r-|{ ch_schedules
+ch_schedules ||-r-|{ broadcasts
+
+genres ||-r-|{ prg_genres
+prg_genres }|-r-|| programs
+
+programs ||-d-|{ prg_episodes
+channels ||-d-|{ ch_schedules
+countries ||-d-|{ broadcasts
+
+@enduml

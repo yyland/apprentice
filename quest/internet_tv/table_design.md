@@ -66,8 +66,8 @@
 |end_time|time|||||
 
 - 外部キー制約：ch_code に対して、channels テーブルの ch_code カラムから設定
-- 外部キー制約：prg_code に対して、programs テーブルの prg_code カラムから設定
-- 外部キー制約：epi_id に対して、episodes テーブルの epi_id カラムから設定
+- 外部キー制約：prg_code に対して、prg_episodes テーブルの prg_code カラムから設定
+- 外部キー制約：epi_id に対して、prg_episodes テーブルの epi_id カラムから設定
 
 テーブル：countries
 

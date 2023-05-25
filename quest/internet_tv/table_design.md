@@ -1,3 +1,14 @@
+<details>
+<summary>ER図</summary>
+<br>
+
+![er_diagram](https://www.plantuml.com/plantuml/png/XLD1RiGW3Bpp2exj8N_OKozzH4I3bI0HY31fjKhsxxLCv5gBsfx2s1xFs90RLbVglaPZ8DLGxtPQN4eGyR36MajmdBA71eQ1Fycj57W8POPK0Et1IGQDyoTfAtakRaNRX0ZFlH9LnYlY0QSIjXfoKbt87auB-3sAWHOQWrUDP8oNj_TNBQSYi0KY_M3lAl21LpJMi3O8oJDGBeYAsOk3rgaVv7aEnX7IN1S-5eZW44PIrgjYhrhYV_iiB8K89RWufjp68OsS25aDYSuXjTgyfrg2I3PyPzbBGLsj8dwKxFpai7OtmkwwPftdpm1V-Bm0VbU_Zy_flXtraCsTvr26yz3hHAE1LEXNPHIG2ZMZCImjAMNMADyFpfxox8svJapqdQ_hDspPpfFSZQIreHialw_n6m00)
+
+</details>
+
+<details>
+<summary>テーブル設計</summary>
+<p><br>
 テーブル：channels
 
 |カラム名|データ型|NULL|キー|初期値|AUTO INCREMENT|
@@ -86,3 +97,6 @@
 
 - 外部キー制約：ch_sch_id に対して、ch_schedules テーブルの ch_sch_id カラムから設定
 - 外部キー制約：country_code に対して、countries テーブルの country_code カラムから設定
+</p>
+</details>
+
